@@ -8,10 +8,12 @@ import 'element-ui/lib/theme-default/index.css'
 import './assets/css/style.less'
 import store from './store'
 import MavonEditor from 'mavon-editor'
+import VueCompositionApi from '@vue/composition-api';
 
 Vue.config.productionTip = false
 Vue.use(ElementUI)
 Vue.use(MavonEditor)
+Vue.use(VueCompositionApi);
 
 /* eslint-disable no-new */
 new Vue({

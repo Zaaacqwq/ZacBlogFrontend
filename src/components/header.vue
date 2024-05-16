@@ -1,6 +1,8 @@
 <!-- 头部公用 -->
 <template>
 <div class="">
+	<image-carousel></image-carousel>
+	<brand></brand>
 	<div class="headBack">
 		<el-row class="container">
 			<el-col :span="24">
@@ -36,7 +38,8 @@
 			</el-col>
 		</el-row>
 	</div>
-	<div class="headImgBox" :style="{backgroundImage:this.$store.state.themeObj.top_image?'url('+this.$store.state.themeObj.top_image+')':'url(static/img/headbg05.jpg)'}">
+	<!-- <div style="height: 900px;"></div> -->
+	<!-- <div class="headImgBox" :style="{backgroundImage:this.$store.state.themeObj.top_image?'url('+this.$store.state.themeObj.top_image+')':'url(static/img/headbg05.jpg)'}">
 		<div class="scene">
 			<div><span id="luke"></span></div>
 		</div>
@@ -50,16 +53,18 @@
 
                 </h2>
 		</div>
-	</div>
+	</div> -->
 </div>
 </template>
 <script>
+import Images from '../components/images.vue';
+import Brand from '../components/brand.vue';
 import {logout} from '../api/user'
 import {removeToken} from '../utils/auth'
 import {getCategoryList} from '../api/category'
-import {
-	Typeit
-} from '../utils/plug.js'
+import {Typeit} from '../utils/plug.js'
+import brand from '../components/brand.vue';
+
 export default {
 	data() { //选项 / 数据
 		return {
@@ -168,7 +173,8 @@ export default {
 		}
 	},
 	components: { //定义组件
-
+		'image-carousel': Images,
+		'brand':Brand,
 	},
 	watch: {
 		// 如果路由有变化，会再次执行该方法
