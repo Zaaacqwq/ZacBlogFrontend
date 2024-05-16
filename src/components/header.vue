@@ -63,7 +63,6 @@ import {logout} from '../api/user'
 import {removeToken} from '../utils/auth'
 import {getCategoryList} from '../api/category'
 import {Typeit} from '../utils/plug.js'
-import brand from '../components/brand.vue';
 
 export default {
 	data() { //选项 / 数据

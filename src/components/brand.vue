@@ -10,13 +10,15 @@
             </div>
         </div>
         <!-- 波浪 -->
-        <!-- <Waves></Waves> -->
+        <waves></waves>
         <!-- 向下按钮 -->
-        <!-- <svg-icon class="arrow-down" icon-class="down" size="32px" @click="scrollDown"></svg-icon> -->
+        <svg-icon class="arrow-down" icon-class="down" size="32px" @click="scrollDown"></svg-icon>
     </div>
 </template>
 
 <script>
+import Wave from '../components/wave.vue';
+import SvgIcon from '../components/svg-icon.vue';
 import EasyTyper from "easy-typer-js";
 export default {
     data() {
@@ -53,6 +55,10 @@ export default {
                 });
         }
     },
+    components: { //定义组件
+		'waves': Wave,
+        'svg-icon': SvgIcon,
+	},
     mounted() {
         this.fetchData();
     }
