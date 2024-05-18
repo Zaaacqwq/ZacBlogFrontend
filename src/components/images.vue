@@ -22,7 +22,6 @@ export default {
             // { id: 5, imgUrl: require('../../static/img/image1.jpg') }
         ]);
 
-        // Simulate the API fetch with static data
         onMounted(() => {
             // Logic to execute on mount
         });
@@ -39,7 +38,7 @@ export default {
     left: 0;
     width: 100%;
     height: 70vh;
-    z-index: -9;
+    z-index: -1; /* Higher than the background */
     background-color: #363636;
     overflow: hidden;
 }

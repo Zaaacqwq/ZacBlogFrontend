@@ -17,8 +17,8 @@
       </div>
       <h1>赞赏说明：</h1>
       <p>
-        如果我的课程对你有所帮助，你可以请作者喝杯咖啡表示鼓励
-        ☕️)请备注留下你的姓名/昵称方便我公布赞赏记录。
+        如果你喜欢我的博客，你可以请我喝杯咖啡表示鼓励
+        ☕️请备注留下你的姓名/昵称方便我公布赞赏记录。
       </p>
       <hr />
       <h1>赞赏方式：</h1>
@@ -29,7 +29,7 @@
               :src="
                 rewardData.wechat_image
                   ? rewardData.wechat_image
-                  : 'static/img/wx_pay.png'
+                  : ''
               "
               :onerror="$store.state.errorImg"
             />
@@ -42,7 +42,7 @@
               :src="
                 rewardData.alipay_image
                   ? rewardData.alipay_image
-                  : 'static/img/ali_pay.jpg'
+                  : ''
               "
               :onerror="$store.state.errorImg"
             />

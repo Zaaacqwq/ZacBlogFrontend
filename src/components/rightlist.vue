@@ -7,7 +7,7 @@
           :src="
             this.$store.state.themeObj.center_smailimg
               ? this.$store.state.themeObj.center_smailimg
-              : 'static/img/img01.jpg'
+              : 'static/img/img.jpg'
           "
           alt=""
         />
@@ -122,9 +122,9 @@ export default {
       catchMeObj: {
         //个人信息
         git: "https://gitee.com",
-        qq: "/static/img/qq.png",
+        qq: "https://www.qq.com",
         sina: "https://weibo.com",
-        wechat: "/static/img/qq.jpg",
+        wechat: "https://www.wechat.com",
         csdn: "http://www.csdn.cn",
         job: "https://www.baidu.com",
       },

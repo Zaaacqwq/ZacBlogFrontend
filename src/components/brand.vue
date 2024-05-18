@@ -9,10 +9,12 @@
                 <span class="easy-typed-cursor">|</span>
             </div>
         </div>
+        <!-- 向下按钮 -->
+        <button class="invisible-button" @click="scrollDown">
+            <svg-icon class="arrow-down" icon-class="down" size="32px"></svg-icon>
+        </button>
         <!-- 波浪 -->
         <waves></waves>
-        <!-- 向下按钮 -->
-        <svg-icon class="arrow-down" icon-class="down" size="32px" @click="scrollDown"></svg-icon>
     </div>
 </template>
 
@@ -56,9 +58,9 @@ export default {
         }
     },
     components: { //定义组件
-		'waves': Wave,
+        'waves': Wave,
         'svg-icon': SvgIcon,
-	},
+    },
     mounted() {
         this.fetchData();
     }
@@ -112,9 +114,18 @@ export default {
 }
 
 .arrow-down {
+    position: flex;
+    cursor: pointer;
+    z-index: 8;
+}
+
+.invisible-button {
+    border: none;
+    background: transparent;
+    width: 50px;
+    height: 50px;
     position: absolute;
-    bottom: 70px;
-    animation: arrow-shake 1.5s ease-out infinite;
+    bottom: 0px;
     cursor: pointer;
     z-index: 8;
 }

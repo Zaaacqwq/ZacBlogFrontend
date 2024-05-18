@@ -1,15 +1,16 @@
 <!-- 文章详情 -->
 <template>
     <div>
-        <sg-nav></sg-nav>
+        <brand></brand>
+        <zac-nav></zac-nav>
         <div  class="container" id="detail">
             <el-row  :gutter="30">
                 <el-col :sm="24" :md="16" style="transition:all .5s ease-out;margin-bottom:30px;">
-                    <sg-articleDetail></sg-articleDetail>
-                    <sg-message></sg-message>
+                    <zac-articleDetail></zac-articleDetail>
+                    <zac-message></zac-message>
                 </el-col>
                 <el-col :sm="24"  :md="8" >
-                    <sg-rightlist></sg-rightlist>
+                    <zac-rightlist></zac-rightlist>
                 </el-col>
             </el-row>
         </div>
@@ -17,6 +18,7 @@
 </template>
 
 <script>
+import Brand from '../components/brand.vue';
 import header from '../components/header.vue'
 import rightlist from '../components/rightlist.vue'
 import articleDetail from '../components/articleDetail.vue'
@@ -32,10 +34,11 @@ import message from '../components/message.vue'
 
         },
         components: { //定义组件
-            'sg-nav':header,
-            'sg-articleDetail':articleDetail,
-            'sg-message':message,
-            'sg-rightlist':rightlist,
+            'brand': Brand,
+            'zac-nav':header,
+            'zac-articleDetail':articleDetail,
+            'zac-message':message,
+            'zac-rightlist':rightlist,
         },
         created() { //生命周期函数
 
